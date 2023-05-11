@@ -304,7 +304,7 @@ export const Login = async (req, res) => {
     });
     res.json({ accessToken });
   } catch (error) {
-    res.status(404).json({ msg: "ไม่มีบัญชีอยู่ในระบบ" });
+    res.status(500).json({ msg: error });
   }
 };
 
